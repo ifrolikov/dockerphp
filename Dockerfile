@@ -4,8 +4,6 @@ WORKDIR /
 
 RUN apt update -y
 
-RUN apt purge -y apache*
-
 RUN apt install -y \
     php\
     php-mbstring\
@@ -17,6 +15,8 @@ RUN apt install -y \
     supervisor\
     composer\
     vim
+
+RUN apt purge -y apache*
 
 ADD ./data/entirypoint.sh /entrypoint.sh
 ADD ./data/nginx /etc/nginx/sites-enabled
