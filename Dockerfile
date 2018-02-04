@@ -14,11 +14,12 @@ RUN apt install -y \
     nginx\
     supervisor\
     composer\
+    curl\
     vim
 
 RUN apt purge -y apache*
+RUN rm -rf /etc/nginx/sites-enabled/*
 
-ADD ./data/entirypoint.sh /entrypoint.sh
 ADD ./data/nginx /etc/nginx/sites-enabled
 ADD ./data/supervisor /etc/supervisor/conf.d/
 
