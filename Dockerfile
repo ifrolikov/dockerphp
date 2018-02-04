@@ -6,6 +6,9 @@ RUN apt update -y
 
 RUN apt install -y \
     php\
+    php-mbstring\
+    php-redis\
+    php-mysqli\
     mysql-client\
     nginx\
     supervisor\
