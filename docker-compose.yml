@@ -1,0 +1,6 @@
+version: "2"
+services:
+  dockerphp:
+    image: dockerphp
+    container_name: dockerphp
+    tty: true
