@@ -1,4 +1,4 @@
-FROM ubuntu:16.04
+FROM ubuntu:17.10
 
 WORKDIR /
 
@@ -9,9 +9,11 @@ RUN apt install -y \
     php-mbstring\
     php-redis\
     php-mysqli\
+    php-dom\
     mysql-client\
     nginx\
     supervisor\
+    composer\
     vim
 
 ADD ./data/entirypoint.sh /entrypoint.sh
