@@ -4,3 +4,6 @@ services:
     image: dockerphp
     container_name: dockerphp
     tty: true
+    build:
+      dockerfile: Dockerfile
+      context: ./

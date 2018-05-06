@@ -2,9 +2,9 @@ FROM ubuntu:17.10
 
 WORKDIR /
 
-RUN apt update -y
+RUN apt-get update -y
 
-RUN apt install -y \
+RUN apt-get install -y \
     php\
     php-mbstring\
     php-redis\
@@ -17,7 +17,7 @@ RUN apt install -y \
     curl\
     vim
 
-RUN apt purge -y apache*
+RUN apt-get purge -y apache*
 RUN rm -rf /etc/nginx/sites-enabled/*
 
 ADD ./data/nginx /etc/nginx/sites-enabled
